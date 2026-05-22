@@ -13,7 +13,7 @@ export default function Component6() {
 
                 <div className="flex flex-col items-start border-box">
 
-                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.4, ease: "easeOut" }} className="flex  gap-4 items-start py-6 border-t border-[#DBE0EC] cursor-pointer ">
+                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.2, ease: "easeOut" }} className="flex  gap-4 items-start py-6 border-t border-[#DBE0EC] cursor-pointer ">
 
                         <div className="w-[165px] h-[100px] bg-cover bg-center bg-[url(/x9.avif)]"></div>
 
@@ -32,7 +32,7 @@ export default function Component6() {
                         </motion.div>
                     </motion.div>
 
-                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.4, ease: "easeOut" }} className="flex gap-4 items-start py-6 border-t border-[#DBE0EC] cursor-pointer">
+                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.2, ease: "easeOut" }} className="flex gap-4 items-start py-6 border-t border-[#DBE0EC] cursor-pointer">
 
                         <div className="w-[165px] h-[100px] bg-cover bg-center bg-[url(/x11.avif)]"></div>
 
@@ -51,7 +51,7 @@ export default function Component6() {
                         </motion.div>
                     </motion.div>
 
-                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.4, ease: "easeOut" }} className="flex gap-4 items-start py-6 border-y border-[#DBE0EC] cursor-pointer ">
+                    <motion.div whileHover="hover" variants={{hover:{x:8}}} transition={{ duration: 0.2, ease: "easeOut" }} className="flex gap-4 items-start py-6 border-y border-[#DBE0EC] cursor-pointer ">
 
                         <div className="w-[165px] h-[100px] bg-cover bg-center bg-[url(/x8.avif)]"></div>
 
@@ -75,7 +75,7 @@ export default function Component6() {
 
                 <motion.button className="flex justify-center items-center gap-[10px] p-3 bg-black cursor-pointer hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]" whileHover="hover">
 
-                    <motion.div variants={{ hover: { opacity: 0.6 } }} transition={{ duration: 0.4, ease: "easeOut" }} className="text-sm [font-family:var(--font-geist-mono)] text-white">View all articles</motion.div>
+                    <motion.div variants={{ hover: { opacity: 0.6 } }} transition={{ duration: 0.2, ease: "easeOut" }} className="text-sm [font-family:var(--font-geist-mono)] text-white">View all articles</motion.div>
 
                 </motion.button>
 

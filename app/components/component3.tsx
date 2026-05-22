@@ -70,8 +70,8 @@ export default function Component3() {
                     </div>
 
                         <motion.button className="flex justify-center items-center gap-[10px] p-4 bg-black cursor-pointer hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]" whileHover = "hover">
-                        <motion.div variants={{hover:{opacity:0.6}}} transition={{duration:0.4,ease:"easeOut"}} className="w-1 h-1 bg-white"></motion.div>
-                        <motion.div variants={{hover:{opacity:0.6}}} transition={{duration:0.4,ease:"easeOut"}} className="text-sm [font-family:var(--font-geist-mono)] text-white">Explore features</motion.div>
+                        <motion.div variants={{hover:{opacity:0.6}}} transition={{duration:0.2,ease:"easeOut"}} className="w-1 h-1 bg-white"></motion.div>
+                        <motion.div variants={{hover:{opacity:0.6}}} transition={{duration:0.2,ease:"easeOut"}} className="text-sm [font-family:var(--font-geist-mono)] text-white">Explore features</motion.div>
 
                     </motion.button>
 
