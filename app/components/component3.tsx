@@ -1,15 +1,33 @@
 "use client"
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 
+
+
+
+const item: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut",
+            delay: 0.5
+        }
+    }
+}
 
 export default function Component3() {
     return (
-        <div className="flex flex-col items-center gap-10 py-30 px-5">
+        <motion.div className="flex flex-col items-center gap-10 py-30 px-5">
 
             <h2 className="text-[40px] font-medium leading-[1] [font-family:var(--font-radio-canada-big)] w-full text-center" >Everything you need to measure,<br /> model, and act on sustainability</h2>
 
-            <div className="flex items-center gap-10 h-[513px] w-full">
+            <motion.div variants={item} initial="hidden" whileInView = "show" viewport={{once:true}}   className="flex items-center gap-10 h-[513px] w-full">
 
                 <div className="h-full w-[50%]">
                     <img src={"./x1.avif"} className="w-full h-full object-cover" />
@@ -76,9 +94,9 @@ export default function Component3() {
                     </motion.button>
 
                 </div>
-            </div>
+            </motion.div>
 
 
-        </div>
+        </motion.div>
     )
 }

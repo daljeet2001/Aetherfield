@@ -1,13 +1,63 @@
+"use client"
 
+import { motion, Variants } from "framer-motion";
 
 export default function Component13() {
+
+
+
+const item1: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut"
+        }
+    }
+}
+
+const item3: Variants = {
+    hidden: {
+        y: 40,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeInOut",
+            delay:0.2
+        }
+    }
+}
+
+const item2: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut"
+        }
+    }
+}
 
     return (
 
         <>
-            <div className="flex flex-col items-center">
+            <motion.div   className="flex flex-col items-center">
 
-                <div className="flex flex-col items-center  gap-4 pt-20 px-5 pb-10 border-box mt-15 w-[80%] text-center">
+                <motion.div variants = {item1} initial = "hidden" whileInView = "show" viewport={{once:true}} className="flex flex-col items-center  gap-4 pt-20 px-5 pb-10 border-box mt-15 w-[80%] text-center">
 
                     <div className="flex justify-center items-start gap-2 border-box">
 
@@ -19,15 +69,16 @@ export default function Component13() {
 
                     <h1 className="text-[80px] leading-[1] tracking-[-0.05em] [font-family:var(--font-radio-canada-big)]">How to Build a Climate-Ready Data Stack</h1>
 
-                </div>
+                </motion.div>
 
 
-                <div className="h-[576.61px] w-full px-5">
+                <motion.div variants = {item3} initial = "hidden" whileInView = "show" viewport={{once:true}} className="h-[576.61px] w-full px-5">
                     <img src={"/x24.avif"} className="object-cover w-full h-full" />
-                </div>
+                </motion.div>
 
+<motion.div className="flex flex-col items-center w-full" variants = {item2} initial = "hidden" whileInView = "show" viewport={{once:true}}>
 
-                <div className="flex items-start justify-between border-box pt-20 px-25 w-full h-[260px]">
+     <div className="flex items-start justify-between border-box pt-20 px-25 w-full h-[260px]">
 
                     <div className="flex flex-col items-start gap-10 border-box">
 
@@ -102,8 +153,10 @@ export default function Component13() {
                     </div>
 
                 </div>
+</motion.div>
+           
 
-            </div>
+            </motion.div>
 
 
         </>

@@ -1,7 +1,31 @@
 "use client"
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/navigation" ;
+
+const container: Variants = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.2
+        }
+    }
+}
+
+const item: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut"
+        }
+    }
+}
 
 export default function Component19(){
 
@@ -9,17 +33,17 @@ export default function Component19(){
 
     return(
 
-        <div className="flex flex-col items-center gap-10 border-box pt-[140px] px-5 pb-30 bg-linear-to-b from-[#A8D3FF]  to-[#FFF4DF]">
+        <motion.div variants = {container} initial = "hidden" animate = "show" className="flex flex-col items-center gap-10 border-box pt-[140px] px-5 pb-30 bg-linear-to-b from-[#A8D3FF]  to-[#FFF4DF]">
 
-            <div className="flex flex-col items-center border-box pb-2">
+            <motion.div variants = {item} className="flex flex-col items-center border-box pb-2">
 
                 <h1 className="text-[80px] leading-[1] tracking-[-0.04em] [font-family:var(--font-source-serif-4)]">Careers at</h1>
                 <h2 className="text-[80px] leading-[1] tracking-[-0.05em] [font-family:var(--font-radio-canada-big)]">Aetherfield</h2>
 
-            </div>
+            </motion.div>
 
 
-            <div className="flex flex-col items-center gap-4 border-box ">
+            <motion.div variants = {item}  className="flex flex-col items-center gap-4 border-box ">
 
                 <div className="flex items-start gap-6 p-10 border-box bg-white rounded-2xl w-[820px]">
 
@@ -146,13 +170,13 @@ export default function Component19(){
 
                 </div>
                  
-            </div>
+            </motion.div>
 
 
 
 
 
-        </div>
+        </motion.div>
 
 
     )

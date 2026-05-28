@@ -1,13 +1,27 @@
 "use client"
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 
+const item: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut"
+        }
+    }
+}
 
 export default function Component5(){
     return(
-        <div className="flex flex-col items-center border-box py-30 px-5">
+        <motion.div className="flex flex-col items-center border-box py-30 px-5">
 
-            <div className="flex items-center gap-10 p-5 bg-[#F6F8FB] rounded-xl">
+            <motion.div variants={item} initial = "hidden" whileInView = "show" viewport = {{once:true}} className="flex items-center gap-10 p-5 bg-[#F6F8FB] rounded-xl">
 
                 <img className="object-cover h-[280px] w-[498px] rounded-lg" src={"./x4.avif"} />
 
@@ -27,8 +41,8 @@ export default function Component5(){
 
                 </div>
 
-            </div>
+            </motion.div>
 
-        </div>
+        </motion.div>
     )
 }

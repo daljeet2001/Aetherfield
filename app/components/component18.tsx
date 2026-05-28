@@ -1,4 +1,21 @@
+"use client"
 
+import { motion, Variants } from "framer-motion";
+
+ const item: Variants = {
+        hidden: {
+            y: 60,
+            opacity: 0
+        },
+        show: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.45,
+                ease: "easeOut"
+            }
+        }
+    }
 
 export default function Component18() {
     return (
@@ -6,7 +23,7 @@ export default function Component18() {
 
             <h2 className="flex w-full items-center justify-start font-medium text-[56px] leading-[1] tracking-[-0.03em] [font-family:var(--font-radio-canada-big)]">Meet the team</h2>
 
-            <div className="flex flex-col items-start gap-[10px] border-box w-full">
+            <motion.div variants = {item} initial = "hidden" whileInView = "show" viewport = {{once:true}} className="flex flex-col items-start gap-[10px] border-box w-full">
 
                 <div className="grid grid-cols-3 w-full">
 
@@ -110,7 +127,7 @@ export default function Component18() {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
 
         </div>
     )

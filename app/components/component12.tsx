@@ -1,19 +1,35 @@
 "use client"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { useRouter } from "next/navigation"
+
+const item: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut",
+            delay:0.2
+        }
+    }
+}
 
 export default function component12() {
 
     const router = useRouter();
 
     return (
-        <div className="flex flex-col items-center gap-10 pt-20 px-5 pb-10">
+        <div className="flex flex-col items-center gap-10 pt-20 px-5 pb-10 w-full">
 
             <h2 className="font-medium text-[40px] leading-[1] tracking-[-0.03em] [font-family:var(--font-radio-canada-big)]">Latest articles</h2>
 
-            <div className="flex justify-center items-start flex-wrap pb-30 gap-x-4 gap-y-20 border-box">
+            <motion.div variants = {item} initial = "hidden" whileInView = "show" viewport ={{once:true}}  className="grid grid-cols-2 pb-30 gap-x-4 gap-y-20 border-box">
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")} whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")} whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x9.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -36,7 +52,7 @@ export default function component12() {
 
                 </motion.div>
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")} whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")} whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x11.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -59,7 +75,7 @@ export default function component12() {
 
                 </motion.div>
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x8.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -82,7 +98,7 @@ export default function component12() {
 
                 </motion.div>
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x12.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -105,7 +121,7 @@ export default function component12() {
 
                 </motion.div>
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x13.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -128,7 +144,7 @@ export default function component12() {
 
                 </motion.div>
 
-                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-[697.5px] cursor-pointer">
+                <motion.div onClick={()=>router.push("/article/how-to-build-a-climate-ready-data-stack")}  whileHover="hover" transition={{ duration: 0.2, ease: "easeOut" }} className="flex flex-col items-start gap-5 border-box  w-full cursor-pointer">
 
                     <div className="bg-[url('/x14.avif')] bg-cover bg-center h-[405.73px] w-full"></div>
 
@@ -153,7 +169,7 @@ export default function component12() {
 
 
 
-            </div>
+            </motion.div>
 
         </div>
     )

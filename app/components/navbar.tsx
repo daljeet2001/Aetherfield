@@ -1,11 +1,48 @@
 "use client"
 import { FaArrowRight } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+
+
+const container:Variants = {
+    hidden:{},
+    show:{
+        transition:{
+            delayChildren:0.5
+        }
+    }
+}
+
+const item:Variants={
+    hidden:{
+        y:"-100%",
+        opacity:0
+    },
+    show:{
+        y:"0%",
+        opacity:1,
+        transition:{
+            duration:0.45,
+            ease:"easeOut"
+        }
+    }
+
+}
+
+
+
+
 
 
 export default function Navbar(){
     return(
-        <div className="flex items-start justify-between p-5 fixed top-0 left-0 w-full backdrop-blur-lg ">
+
+        <motion.div variants={container} viewport={{once:true}} initial = "hidden" whileInView = "show">
+
+              <motion.div
+              variants={item}
+    
+        
+        className="flex items-start justify-between p-5 fixed top-0 left-0 w-full backdrop-blur-lg z-100">
 
 <a href="/" className="w-[121.99px] h-5 cursor-pointer">
        <div className="w-full h-full">
@@ -27,6 +64,9 @@ export default function Navbar(){
                     <motion.a whileHover="hover"  className="flex items-center justify-center gap-1 cursor-pointer"><p className="[font-family:var(--font-radio-canada-big)] text-base font-medium leading-[1.2]">Get started</p><motion.div variants={{hover:{x:3}}} transition={{duration:0.2, ease:"easeOut"}}><FaArrowRight size={12} /></motion.div></motion.a>
 </div>
          
-        </div>
+        </motion.div>
+
+        </motion.div>
+      
     )
 }

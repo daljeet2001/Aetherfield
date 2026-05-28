@@ -2,16 +2,38 @@
 
 "use client"
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 
+const container: Variants = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.2
+        }
+    }
+}
 
+const item: Variants = {
+    hidden: {
+        y: 60,
+        opacity:0
+    },
+    show: {
+        y: 0,
+        opacity:1,
+        transition: {
+            duration: 0.45,
+            ease: "easeOut"
+        }
+    }
+}
 export default function Component15(){
     return(
-        <div className="flex items-center gap-4 border-box h-[100vh]">
+        <motion.div variants = {container} initial = "hidden" animate = "show" className="flex items-center gap-4 border-box h-[100vh]">
 
-            <div className="bg-cover bg-center h-full bg-[url('/x15.avif')] w-[50%]"></div>
+            <motion.div variants = {item} className="bg-cover bg-center h-full bg-[url('/x15.avif')] w-[50%]"></motion.div>
 
-            <div className="flex flex-col items-start justify-center gap-14 border-box pr-[105px] pl-[64px] h-full w-[50%]">
+            <motion.div variants = {item} className="flex flex-col items-start justify-center gap-14 border-box pr-[105px] pl-[64px] h-full w-[50%]">
 
                 <div className="flex flex-col items-start gap-4 border-box w-[500px]">
 
@@ -27,9 +49,9 @@ export default function Component15(){
 
                     </motion.button>
 
-            </div>
+            </motion.div>
 
-        </div>
+        </motion.div>
     )
 }
 
