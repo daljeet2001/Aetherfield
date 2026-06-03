@@ -38,20 +38,20 @@ const item2: Variants = {
 
 export default function Component4() {
     return (
-        <motion.div  className="h-[678px] w-full bg-[url('/x3.webp')] bg-cover bg-center flex flex-col items-center gap-10 py-30 px-5">
+        <motion.div  className="lg:h-[678px] h-auto w-full bg-[url('/x3.webp')] bg-cover bg-center flex flex-col items-center gap-8 md:gap-10 py-10 md:py-20 lg:py-30 px-5">
 
-            <motion.div variants={item} initial="hidden" whileInView="show" viewport={{once:true}}    className="flex flex-col items-end border-box pb-2">
+            <motion.div variants={item} initial="hidden" whileInView="show" viewport={{once:true}}    className="flex flex-col items-end border-box md:pb-2">
 
-                <h2 className="text-[80px] leading-[1] [font-family:var(--font-source-serif-4)] tracking-[-0.04em] text-center w-full">Built for clarity
+                <h2 className="text-4xl md:text-[64px] lg:text-[80px] leading-[1] [font-family:var(--font-source-serif-4)] tracking-[-0.04em] text-center w-full">Built for clarity
                 </h2>
-                <h2 className="text-[80px] leading-[1] tracking-[-0.05em] [font-family:var(--font-radio-canada-big)] text-center w-full">Designed for action
+                <h2 className="text-4xl md:text-[64px] lg:text-[80px] leading-[1] tracking-[-0.05em] [font-family:var(--font-radio-canada-big)] text-center w-full">Designed for action
                 </h2>
 
             </motion.div>
 
-            <motion.div variants={item2} initial="hidden" whileInView="show" viewport={{once:true}}   className="flex items-start gap-4 border-box">
+            <motion.div variants={item2} initial="hidden" whileInView="show" viewport={{once:true}}   className="grid grid-cols-1 lg:grid-cols-3 gap-4 border-box ">
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl w-full">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x21.svg" />
 
@@ -63,7 +63,7 @@ export default function Component4() {
 
                 </div>
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl w-full">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x19.svg" />
 
@@ -75,7 +75,7 @@ export default function Component4() {
 
                 </div>
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-white rounded-xl w-full">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x20.svg" />
 

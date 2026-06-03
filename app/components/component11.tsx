@@ -19,6 +19,6 @@ const item: Variants = {
 
 export default function Component11(){
     return(
-       <motion.img variants= {item} initial = "hidden" whileInView = "show" viewport = {{once:true}} src="./x10.avif" className="object-cover w-full mt-15 px-5"/>
+       <motion.img variants= {item} initial = "hidden" whileInView = "show" viewport = {{once:true}} src="./x10.avif" className="object-cover w-full mt-[64px] md:mt-15  px-5 aspect-[2.58]"/>
     )
 }

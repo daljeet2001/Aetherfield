@@ -36,13 +36,13 @@ const item2: Variants = {
 
 export default function Component16() {
     return (
-        <div className="flex flex-col items-center gap-10 border-box pt-30 px-5 pb-40">
+        <div className="flex flex-col items-center gap-10 border-box pt-10 md:pt-20 lg:pt-30 px-5 pb-10 md:pb-30 lg:pb-40 w-full">
 
-            <motion.h2 variants = {item1} initial = "hidden" whileInView = "show" viewport = {{once:true}}  className="text-[40px] pb-2 font-medium leading-[1] tracking-[-0.03em] [font-family:var(--font-radio-canada-big)]">Our values</motion.h2>
+            <motion.h2 variants = {item1} initial = "hidden" whileInView = "show" viewport = {{once:true}}  className="text-2xl md:text-[32px] lg:text-[40px] pb-2 font-medium leading-[1] tracking-[-0.03em] [font-family:var(--font-radio-canada-big)]">Our values</motion.h2>
 
-            <motion.div variants = {item2} initial = "hidden" whileInView = "show" viewport = {{once:true}}  className="flex items-start gap-4 border-box">
+            <motion.div variants = {item2} initial = "hidden" whileInView = "show" viewport = {{once:true}}  className="flex flex-col lg:flex-row items-start gap-4 border-box w-full">
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl w-full lg:w-auto">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x21.svg" />
 
@@ -54,7 +54,7 @@ export default function Component16() {
 
                 </div>
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl w-full lg:w-auto">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x19.svg" />
 
@@ -66,7 +66,7 @@ export default function Component16() {
 
                 </div>
 
-                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl">
+                <div className="flex flex-col items-start gap-6 p-10 bg-[#F6F8FB] rounded-xl w-full lg:w-auto">
 
                     <img className="w-[42px] h-[42px] object-cover" src="./x20.svg" />
 

@@ -49,23 +49,23 @@ export default function Header() {
 
         <>
 
-            <motion.div variants={container} initial="hidden" animate="show" className="h-[1074px] w-full flex flex-col items-center gap-14 px-5 pt-35 bg-[linear-gradient(to_bottom,#A8D3FF_0%,#FFF4DF_75%,white_75%,white_100%)]">
+            <motion.div variants={container} initial="hidden" animate="show" className="h-auto w-full flex flex-col items-center gap-8 md:gap-14 px-5 pt-30 md:pt-35 bg-[linear-gradient(to_bottom,#A8D3FF_0%,#FFF4DF_85%,white_85%,white_100%)] md:bg-[linear-gradient(to_bottom,#A8D3FF_0%,#FFF4DF_80%,white_80%,white_100%)]  ">
 
 
-                <motion.div variants={item1} className="flex flex-col items-center gap-8 ">
+                <motion.div variants={item1} className="flex flex-col items-center gap-6 md:gap-8 ">
 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-3 md:gap-4">
 
                         <div className="flex flex-col leading-[1]">
-                            <h1 className="text-[80px] [font-family:var(--font-source-serif-4)] tracking-[-0.04em]">Sustainability insights,</h1>
-                            <h2 className="text-[80px] [font-family:var(--font-radio-canada-big)] text-center tracking-[-0.05em]">built for business</h2>
+                            <h1 className="text-4xl md:text-[64px] lg:text-[80px] [font-family:var(--font-source-serif-4)] tracking-[-0.04em] text-center">Sustainability insights,</h1>
+                            <h2 className="text-4xl md:text-[64px] lg:text-[80px] [font-family:var(--font-radio-canada-big)] text-center tracking-[-0.05em] text-center">built for business</h2>
                         </div>
 
-                        <p className="text-xl leading-[1.2] [font-family:var(--font-source-serif-4)]">Track impact, reduce emissions, and accelerate progress—with clarity and confidence.</p>
+                        <p className="text-lg md:text-xl leading-[1.2] [font-family:var(--font-source-serif-4)] text-center">Track impact, reduce emissions, and accelerate progress—with clarity and confidence.</p>
 
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4">
 
                         <motion.button className="flex justify-center items-center gap-[10px] p-4 bg-black cursor-pointer hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]" whileHover="hover" >
                             <motion.div variants={{ hover: { opacity: 0.6 } }} transition={{ duration: 0.2, ease: "easeOut" }} className="w-1 h-1 bg-white"></motion.div>
@@ -83,7 +83,7 @@ export default function Header() {
                 </motion.div>
 
 
-                <motion.div variants={item2} className="rounded-3xl h-[608px] w-[960px] bg-[url('/x2.avif')] bg-cover bg-center border-2 border-black"></motion.div>
+                <motion.div variants={item2} className="rounded-3xl aspect-[1.57] w-full  lg:w-[960px] bg-[url('/x2.avif')] bg-cover bg-center border-2 border-black"></motion.div>
 
 
 
